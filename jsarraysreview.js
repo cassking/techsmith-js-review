@@ -1,6 +1,6 @@
 //different ways to REMOVE dupes from Arrays
 //Four solutions, 1 ) One brute-force method using a for loop,  2)sort and remove, 3)  using JavaScript Objects and 4) Using ES6 / ES2015 Sets.
-//least complex
+//least complex fastest using ES6 Set
 let a = [1,2,5,2,1,8]
 let b =[]
 let len = a.length
@@ -9,8 +9,9 @@ let bSet = new Set(a)
 //or use spread operator
 console.log([... new Set(a)])//use spread opconverts to Array
 //using new ES6 set which only stores unique vals
-//using a seprate Array
 
+//using a seprate Array
+//brute force method
 for(let i=0; i< len; i++){
   if(b.indexOf(a[i] === -1)){//-1 means does not exist
     b.push(a[i])
@@ -28,7 +29,9 @@ for(let i=0;i<len; i++){
   }
 }
 
-//store in sep array
+//store in an object which
+//allows only unique keys
+//then iterate and return array
 obj = {};
 for(let val of a){
   obj[val] = true//keys are unique
