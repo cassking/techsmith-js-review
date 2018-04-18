@@ -1,4 +1,4 @@
-//prototype inheritance
+////prototype inheritance
 //every object has a prototype
 //ohter objects inherit props from parent
 //calling method on object, looks at object
@@ -19,7 +19,8 @@ console.log(nissan.getModel())
 //fiunction decl v function expression
 
 funcD() // available here
-funcE() //not available here
+//funcE() //not available here
+// will throw error
 function funcD() {
   console.log('function declaration')
 }
@@ -36,16 +37,16 @@ funcE() // available here
 //that has to function, then execute
 //a call back function on success or failure
 //promises simplify this
-
-var promise1 = newPromise(function(resolve, reject){
-  resolve($.ajax('a.json'))
-})
-
-promise1.then(function(r){
-  return new Promise()
-}).then(function(result){
-  $('#div1').html(result);
-})
+// 
+// var promise1 = new Promise(function(resolve, reject){
+//   resolve($.ajax('a.json'))
+// })
+//
+// promise1.then(function(r){
+//   return new Promise()
+// }).then(function(result){
+//   $('#div1').html(result);
+// })
 
 
 //setTimeout()
@@ -90,16 +91,16 @@ console.log(sentence)// returns hello
 //editable content
 // in inspect get the document.body.contentEditable= true
 // can edit pages on chrome
-<div contentEditable='true'>hello</div>
+//<div contentEditable='true'>hello</div>
 
 
 function y() {
   console.log(this.length)
 }
-var x = {
-  length = 5,
+var z = {
+  length: 5,
   method:function(y){
     arguments[0]()
   }
 }
-x.method(y,1)//retuns 2 length of array of arguments
+z.method(y,1)//retuns 2 length of array of arguments
