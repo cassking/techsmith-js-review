@@ -37,5 +37,5 @@ for(let val of a){
   obj[val] = true//keys are unique
 }
 
-let b =Object.keys(obj)//return as array
+b =Object.keys(obj)//return as array
 console.log(obj)
